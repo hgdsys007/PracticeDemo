@@ -2,6 +2,7 @@ package com.lzz.studtdemo;
 
 import android.graphics.Color;
 import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.TypedValue;
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private UltraViewPager ultraViewPager;
     private UltraPagerAdapter ultraPagerAdapter;
     private List<User> users;
+    private ViewPager realViewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         greenDaoDemoApplication = GreenDaoDemoApplication.getGreenDaoDemoApplication();
         daoSession = greenDaoDemoApplication.getDaoSession();
         ultraViewPager = findViewById(R.id.ultra_viewpager);
+        realViewPager = ultraViewPager.getViewPager();
+
         findViewById(R.id.insert).setOnClickListener(this);
         findViewById(R.id.delete).setOnClickListener(this);
         findViewById(R.id.change).setOnClickListener(this);
@@ -44,10 +48,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void setupUltraViewPager() {
         ultraViewPager.setScrollMode(UltraViewPager.ScrollMode.HORIZONTAL);
-        ultraPagerAdapter = new UltraPagerAdapter(false);
-        //UltraPagerAdapter 绑定子view到UltraViewPager
-        ultraViewPager.setAdapter(ultraPagerAdapter);
+        ultraPagerAdapter = new UltraPagerAdapter(true);
+        realViewPager.setAdapter(ultraPagerAdapter);
 
+        //UltraPagerAdapter 绑定子view到UltraViewPager
+        ultraPagerAdapter.setData(users);
 
         ultraViewPager.setInfiniteLoop(true);
         ultraViewPager.setMultiScreen(0.6f);
@@ -94,6 +99,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+    int i = 5;
+
     private void select() {
         //查询所有
 //        List<User> users = daoSession.getUserDao().loadAll();
@@ -102,16 +109,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //查询名称为“修改了”where（条件1，条件2，）
 //        List<User> users = daoSession.getUserDao().queryBuilder().where(UserDao.Properties.Name.eq("修改了")).list();
         //查询所有并降序, 跳过前五条offset(5)，只显示3条limit(3)。
-        users = daoSession.getUserDao().queryBuilder().orderDesc(UserDao.Properties.Age).offset(5).limit(3).list();
+        users = daoSession.getUserDao().queryBuilder().orderDesc(UserDao.Properties.Age).offset(i).limit(6).list();
         Logger.e("总长度" + users.size());
         for (int i = 0; i < users.size(); i++) {
             Logger.e("i" + i, users.get(i).toString());
         }
+        if (users.size() > 0) {
+            ultraViewPager.setVisibility(View.VISIBLE);
+        } else {
+            ultraViewPager.setVisibility(View.GONE);
+        }
+        //每次获取数据重新设置Adapter,防止数据初始化负一屏为空
+        ultraPagerAdapter = new UltraPagerAdapter(false, users);
+        realViewPager.setAdapter(ultraPagerAdapter);
 
-        ultraPagerAdapter.setData(users);
-        ultraViewPager.getWrapAdapter().notifyDataSetChanged();
-        ultraViewPager.setAdapter(ultraPagerAdapter);
-//        ultraViewPager.refresh();
+        i += 1;
 
     }
 

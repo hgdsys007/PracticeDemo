@@ -40,6 +40,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * 一屏展示前后俩个View的ViewPager
  * Created by mikeafc on 15/11/26.
  */
 public class UltraPagerAdapter extends PagerAdapter {
@@ -80,7 +81,7 @@ public class UltraPagerAdapter extends PagerAdapter {
         LinearLayout linearLayout = (LinearLayout) LayoutInflater.from(container.getContext()).inflate(R.layout.layout_child, null);
         //new LinearLayout(container.getContext());
         TextView textView = (TextView) linearLayout.findViewById(R.id.pager_textview);
-        textView.setText(position + "UltraViewPager");
+        textView.setText(users.get(position).getName() + "UltraViewPager");
         linearLayout.setId(R.id.item_id);
         switch (position) {
             case 0:
