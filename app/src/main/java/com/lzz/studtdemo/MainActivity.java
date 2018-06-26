@@ -10,6 +10,7 @@ import android.view.Gravity;
 import android.view.View;
 
 import com.example.lzz.studtdemo.Logger;
+import com.lzz.studtdemo.adapter.CustomTransformer;
 import com.lzz.studtdemo.adapter.UltraPagerAdapter;
 import com.lzz.studtdemo.greendao.DaoSession;
 import com.lzz.studtdemo.greendao.User;
@@ -37,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         daoSession = greenDaoDemoApplication.getDaoSession();
         ultraViewPager = findViewById(R.id.ultra_viewpager);
         realViewPager = ultraViewPager.getViewPager();
-
+        realViewPager.setPageTransformer(true, new CustomTransformer());
         findViewById(R.id.insert).setOnClickListener(this);
         findViewById(R.id.delete).setOnClickListener(this);
         findViewById(R.id.change).setOnClickListener(this);

@@ -99,6 +99,10 @@ public class UltraPagerAdapter extends PagerAdapter {
             case 4:
                 linearLayout.setBackgroundColor(Color.parseColor("#F44336"));
                 break;
+            default:
+                linearLayout.setBackgroundColor(Color.parseColor("#F42311"));
+
+                break;
         }
         container.addView(linearLayout);
 //        linearLayout.getLayoutParams().width = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 180, container.getContext().getResources().getDisplayMetrics());
