@@ -16,6 +16,7 @@ import com.lzz.studtdemo.greendao.DaoSession;
 import com.lzz.studtdemo.greendao.Teacher;
 import com.lzz.studtdemo.greendao.User;
 import com.lzz.studtdemo.greendao.UserDao;
+import com.lzz.studtdemo.utils.StatusBarUtil;
 import com.tmall.ultraviewpager.UltraViewPager;
 
 import java.util.ArrayList;
@@ -46,6 +47,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.select).setOnClickListener(this);
         findViewById(R.id.go2Trans).setOnClickListener(this);
 
+
+//        StatusBarUtil.setTransparent(this);
+
+//        StatusBarUtil.setTransparent(this,null);
+        StatusBarUtil.setFullScreen(this);
         setupUltraViewPager();
     }
 

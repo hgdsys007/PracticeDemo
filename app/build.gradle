@@ -2,11 +2,11 @@ apply plugin: 'com.android.application'
 apply plugin: 'org.greenrobot.greendao' // apply plugin
 
 android {
-    compileSdkVersion 27
+    compileSdkVersion 26
     defaultConfig {
         applicationId "com.example.lzz.greendaodemo"
         minSdkVersion 16
-        targetSdkVersion 27
+        targetSdkVersion 23
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -29,8 +29,7 @@ greendao {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'com.android.support:appcompat-v7:27.1.1'
-    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    implementation 'com.android.support:appcompat-v7:26.0.1'
     implementation 'com.android.support.constraint:constraint-layout:1.1.2'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
@@ -45,4 +44,9 @@ dependencies {
         //依赖冲突解决
         exclude group: 'com.android.support'
     }
+    //1.1.0 API改动过大，老用户升级需谨慎
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-12'
+    compile 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-12'
+    //没有使用特殊Header，可以不加这行
+    implementation 'com.android.support:recyclerview-v7:26.0.1'
 }

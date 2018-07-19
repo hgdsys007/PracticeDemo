@@ -1,40 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <android.support.v4.widget.NestedScrollView
-        android:id="@+id/swipe_target"
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white">
+        android:background="#444444"
+        app:srlAccentColor="@android:color/white"
+        app:srlEnablePreviewInEditMode="true"
+        app:srlPrimaryColor="#444444">
 
-        <LinearLayout
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/swipe_target"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:focusable="true"
-            android:focusableInTouchMode="true"
-            android:orientation="vertical">
+            android:background="@color/white">
 
-            <ImageView
-                android:id="@+id/iv_act_cover"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="310dp"
-                android:scaleType="fitXY"
-                android:src="@mipmap/gongsizhuye_image_songsizhuyedingbu5"
-                android:visibility="visible" />
-            <TextView
-                android:text="测试渐变透明栏目测试渐变透明栏目测试渐变透明栏目测试渐变透明栏目测试渐变透明栏目测试渐变透明栏目测试渐变透明栏目"
-                android:layout_width="match_parent"
-                android:layout_height="300dp" />
-            <TextView
-                android:text="测试渐变透明栏目测试渐变透明栏目测试渐变透明栏目测试渐变透明栏目测试渐变透明栏目测试渐变透明栏目测试渐变透明栏目"
-                android:layout_width="match_parent"
-                android:layout_height="300dp" />
-        </LinearLayout>
+                android:layout_height="match_parent"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_act_cover"
+                    android:layout_width="match_parent"
+                    android:layout_height="310dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/gongsizhuye_image_songsizhuyedingbu5"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:text="测试渐变透明栏目测试渐变透明栏目测试渐变透明栏目测试渐变透明栏目测试渐变透明栏目测试渐变透明栏目测试渐变透明栏目" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:text="测试渐变透明栏目测试渐变透明栏目测试渐变透明栏目测试渐变透明栏目测试渐变透明栏目测试渐变透明栏目测试渐变透明栏目" />
+            </LinearLayout>
 
 
-    </android.support.v4.widget.NestedScrollView>
+        </android.support.v4.widget.NestedScrollView>
+
+        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
 
 
     <com.lzz.studtdemo.view.TranslucentActionBar

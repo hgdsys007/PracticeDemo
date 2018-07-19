@@ -71,7 +71,7 @@ public class ActionBarTrans {
         // 上移主要背景图片，使空白状态栏消失(这样下方就空了状态栏的高度)
         if (ivActCover != null) {
             ViewGroup.MarginLayoutParams layoutParams = (ViewGroup.MarginLayoutParams) ivActCover.getLayoutParams();
-            layoutParams.setMargins(0, -StatusBarUtil.getStatusBarHeight(context), 0, 0);
+//            layoutParams.setMargins(0, -StatusBarUtil.getStatusBarHeight(context), 0, 0);
         }
 
         ViewGroup.LayoutParams imgItemBgparams = ivActCover.getLayoutParams();

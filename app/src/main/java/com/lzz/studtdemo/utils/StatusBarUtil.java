@@ -673,7 +673,8 @@ public class StatusBarUtil {
             return;
         }
         transparentStatusBar(activity);
-        topView.setPadding(topView.getPaddingLeft(), getStatusBarHeight(activity), topView.getPaddingRight(), topView.getBottom());
+        if (topView != null)
+            topView.setPadding(topView.getPaddingLeft(), getStatusBarHeight(activity), topView.getPaddingRight(), topView.getBottom());
 
     }
 
