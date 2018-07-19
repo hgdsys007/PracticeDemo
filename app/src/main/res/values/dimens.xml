@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">14dp</dimen>
+    <dimen name="nav_bar_height">56dp</dimen>
+    <!--渐变时还没到布局全部就已经不透明了，距离 45dp-->
+    <dimen name="base_header_activity_slide_more">45dp</dimen>
+    <dimen name="nav_bar_height_more">58dp</dimen>
+</resources>

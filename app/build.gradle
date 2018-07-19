@@ -5,7 +5,7 @@ android {
     compileSdkVersion 27
     defaultConfig {
         applicationId "com.example.lzz.greendaodemo"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
@@ -20,7 +20,7 @@ android {
 }
 
 greendao {
-    schemaVersion 1//数据库版本号
+    schemaVersion 6//数据库版本号
     daoPackage 'com.lzz.studtdemo.greendao'//设置DaoMaster、DaoSession、Dao包名
     targetGenDir 'src/main/java'//设置DaoMaster、DaoSession、Dao目录
     //targetGenDirTest：设置生成单元测试目录
@@ -28,14 +28,17 @@ greendao {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support:recyclerview-v7:27.1.1'
     implementation 'com.android.support.constraint:constraint-layout:1.1.2'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    implementation 'org.greenrobot:greendao:3.2.2' // add library
+    implementation 'org.greenrobot:greendao:3.2.2'
+    // add library
+    compile 'com.github.yuweiguocn:GreenDaoUpgradeHelper:v2.1.0'
+    //一个greenDao的数据库升级帮助类
     //gradle
     implementation('com.alibaba.android:ultraviewpager:1.0.7.7@aar') {
         transitive = true

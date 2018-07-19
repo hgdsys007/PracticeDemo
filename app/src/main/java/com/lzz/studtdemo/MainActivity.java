@@ -1,7 +1,6 @@
 package com.lzz.studtdemo;
 
 import android.graphics.Color;
-import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,9 +9,11 @@ import android.view.Gravity;
 import android.view.View;
 
 import com.example.lzz.studtdemo.Logger;
+import com.lzz.studtdemo.activity.AnamorphismActivity;
 import com.lzz.studtdemo.adapter.CustomTransformer;
 import com.lzz.studtdemo.adapter.UltraPagerAdapter;
 import com.lzz.studtdemo.greendao.DaoSession;
+import com.lzz.studtdemo.greendao.Teacher;
 import com.lzz.studtdemo.greendao.User;
 import com.lzz.studtdemo.greendao.UserDao;
 import com.tmall.ultraviewpager.UltraViewPager;
@@ -23,7 +24,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private DaoSession daoSession;
-    private GreenDaoDemoApplication greenDaoDemoApplication;
+    private StudyDemoApplication studyDemoApplication;
     private UltraViewPager ultraViewPager;
     private UltraPagerAdapter ultraPagerAdapter;
     private List<User> users;
@@ -34,8 +35,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         users = new ArrayList<>();
-        greenDaoDemoApplication = GreenDaoDemoApplication.getGreenDaoDemoApplication();
-        daoSession = greenDaoDemoApplication.getDaoSession();
+        studyDemoApplication = StudyDemoApplication.getStudyDemoApplication();
+        daoSession = studyDemoApplication.getDaoSession();
         ultraViewPager = findViewById(R.id.ultra_viewpager);
         realViewPager = ultraViewPager.getViewPager();
         realViewPager.setPageTransformer(true, new CustomTransformer());
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.delete).setOnClickListener(this);
         findViewById(R.id.change).setOnClickListener(this);
         findViewById(R.id.select).setOnClickListener(this);
+        findViewById(R.id.go2Trans).setOnClickListener(this);
 
         setupUltraViewPager();
     }
@@ -97,7 +99,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.select:
                 select();
                 break;
+            case R.id.go2Trans:
+                go2Trans();
+                break;
+
         }
+    }
+
+    /**
+     * 进入状态栏渐变
+     */
+    private void go2Trans() {
+        AnamorphismActivity.startActivity(this);
     }
 
     int i = 5;
@@ -160,6 +173,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         long insert = daoSession.getUserDao().insert(user);
         daoSession.clear();
 
-        Logger.e(insert + "");
+        Teacher teacher = new Teacher();
+        teacher.setName("李老师");
+        long insertT = daoSession.getTeacherDao().insert(teacher);
+
+
+        Logger.e(insert + "Teacher insertT" + insert);
     }
 }

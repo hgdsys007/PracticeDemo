@@ -4,13 +4,14 @@ import android.app.Application;
 
 import com.lzz.studtdemo.greendao.DaoMaster;
 import com.lzz.studtdemo.greendao.DaoSession;
+import com.lzz.studtdemo.greendao.MySQLiteOpenHelper;
 
 import org.greenrobot.greendao.database.Database;
 
 
-public class GreenDaoDemoApplication extends Application {
+public class StudyDemoApplication extends Application {
     private static final String DATA_BASE_NAME = "USER";
-    private static GreenDaoDemoApplication context;
+    private static StudyDemoApplication context;
     private DaoSession daoSession;
 
     @Override
@@ -21,8 +22,10 @@ public class GreenDaoDemoApplication extends Application {
     }
 
     private void createDataBase() {
-        DaoMaster.DevOpenHelper devOpenHelper = new DaoMaster.DevOpenHelper(context, DATA_BASE_NAME);
-        Database db = devOpenHelper.getWritableDb();
+        //第二部，替换OpenHelper，解决数据库升级，数据丢失问题。
+        MySQLiteOpenHelper mySQLiteOpenHelper = new MySQLiteOpenHelper(context, DATA_BASE_NAME, null);
+//        DaoMaster.DevOpenHelper devOpenHelper = new DaoMaster.DevOpenHelper(context, DATA_BASE_NAME);
+        Database db = mySQLiteOpenHelper.getWritableDb();
         DaoMaster daoMaster = new DaoMaster(db);
         daoSession = daoMaster.newSession();
     }
@@ -31,7 +34,7 @@ public class GreenDaoDemoApplication extends Application {
         return daoSession;
     }
 
-    public static GreenDaoDemoApplication getGreenDaoDemoApplication() {
+    public static StudyDemoApplication getStudyDemoApplication() {
         return context;
     }
 }
