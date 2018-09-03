@@ -6,11 +6,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
+
     <Button
         android:id="@+id/insert"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="增加" />
+
     <com.tmall.ultraviewpager.UltraViewPager
         android:id="@+id/ultra_viewpager"
         android:layout_width="match_parent"
@@ -18,7 +20,6 @@
         android:layout_centerInParent="true"
         android:background="@android:color/white"
         android:visibility="visible" />
-
 
 
     <Button
@@ -44,4 +45,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="进入状态栏渐变" />
+
+    <Button
+        android:id="@+id/go2Sticky"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="进入RecyclerView吸顶刷新" />
 </LinearLayout>

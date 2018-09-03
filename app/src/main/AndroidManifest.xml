@@ -18,6 +18,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.AnamorphismActivity" />
+
+        <activity android:name=".activity.StickyHeaderActivity" />
     </application>
 
 </manifest>

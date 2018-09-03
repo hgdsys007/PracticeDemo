@@ -10,6 +10,7 @@ import android.view.View;
 
 import com.example.lzz.studtdemo.Logger;
 import com.lzz.studtdemo.activity.AnamorphismActivity;
+import com.lzz.studtdemo.activity.StickyHeaderActivity;
 import com.lzz.studtdemo.adapter.CustomTransformer;
 import com.lzz.studtdemo.adapter.UltraPagerAdapter;
 import com.lzz.studtdemo.greendao.DaoSession;
@@ -46,12 +47,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.change).setOnClickListener(this);
         findViewById(R.id.select).setOnClickListener(this);
         findViewById(R.id.go2Trans).setOnClickListener(this);
-
+        findViewById(R.id.go2Sticky).setOnClickListener(this);
 
 //        StatusBarUtil.setTransparent(this);
 
 //        StatusBarUtil.setTransparent(this,null);
-        StatusBarUtil.setFullScreen(this);
+//        StatusBarUtil.setFullScreen(this);
         setupUltraViewPager();
     }
 
@@ -88,6 +89,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         //设定页面自动切换  间隔2秒
         ultraViewPager.setAutoScroll(2000);
+        ultraViewPager.setVisibility(View.GONE);
     }
 
     @Override
@@ -108,6 +110,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.go2Trans:
                 go2Trans();
                 break;
+            case R.id.go2Sticky:
+                go2Sticky();
+                break;
 
         }
     }
@@ -116,6 +121,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      * 进入状态栏渐变
      */
     private void go2Trans() {
+        AnamorphismActivity.startActivity(this);
+    }
+
+    /**
+     * 进入吸頂
+     */
+    private void go2Sticky() {
         AnamorphismActivity.startActivity(this);
     }
 
@@ -129,7 +141,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //查询名称为“修改了”where（条件1，条件2，）
 //        List<User> users = daoSession.getUserDao().queryBuilder().where(UserDao.Properties.Name.eq("修改了")).list();
         //查询所有并降序, 跳过前五条offset(5)，只显示3条limit(3)。
-        users = daoSession.getUserDao().queryBuilder().orderDesc(UserDao.Properties.Age).offset(i).limit(6).list();
+        users = daoSession.getUserDao().queryBuilder().orderDesc(UserDao.Properties.Age).offset(5).limit(6).list();
         Logger.e("总长度" + users.size());
         for (int i = 0; i < users.size(); i++) {
             Logger.e("i" + i, users.get(i).toString());
