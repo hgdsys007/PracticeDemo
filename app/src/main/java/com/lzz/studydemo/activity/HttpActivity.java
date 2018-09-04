@@ -55,7 +55,7 @@ public class HttpActivity extends BaseActivity {
      * get请求
      */
     private void httpGet() {
-        J.http().get("http://sdrz-wap-api.gxk.yxlearning.com/train-api/class/query-class-list", null, null,
+        J.http().get("http://sdrz-wap-api.gxk.yxlearning.com/train-api/class/query-class-list", this, null,
                 new DialogCallback<HttpResult<ClassListBean>>(activity) {
                     @Override
                     public void success(HttpResult<ClassListBean> res) {
