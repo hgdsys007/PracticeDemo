@@ -1,4 +1,4 @@
-package com.lzz.studtdemo.adapter;/*
+package com.lzz.studydemo.adapter;/*
  *
  *  MIT License
  *
@@ -33,8 +33,8 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.lzz.studtdemo.R;
-import com.lzz.studtdemo.greendao.User;
+import com.lzz.studydemo.R;
+import com.lzz.studydemo.greendao.User;
 
 import java.util.ArrayList;
 import java.util.List;

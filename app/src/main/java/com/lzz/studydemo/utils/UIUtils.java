@@ -1,4 +1,4 @@
-package com.lzz.studtdemo.utils;
+package com.lzz.studydemo.utils;
 
 
 import android.content.Context;
@@ -7,7 +7,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Handler;
 import android.view.View;
 
-import com.lzz.studtdemo.StudyDemoApplication;
+import com.lzz.studydemo.StudyDemoApplication;
 
 /**
  * Created by lizhizhan on 2016/10/21.

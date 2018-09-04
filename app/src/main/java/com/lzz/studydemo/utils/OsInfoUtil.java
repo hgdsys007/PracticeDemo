@@ -1,4 +1,4 @@
-package com.lzz.studtdemo.utils;
+package com.lzz.studydemo.utils;
 
 import android.os.Build;
 import android.os.Environment;

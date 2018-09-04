@@ -1,4 +1,4 @@
-package com.lzz.studtdemo.present;
+package com.lzz.studydemo.present;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -12,11 +12,11 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.ImageView;
 
-import com.lzz.studtdemo.StudyDemoApplication;
-import com.lzz.studtdemo.utils.StatusBarUtil;
-import com.lzz.studtdemo.utils.UIUtils;
-import com.lzz.studtdemo.view.TranslucentActionBar;
-import com.lzz.studtdemo.R;
+import com.lzz.studydemo.StudyDemoApplication;
+import com.lzz.studydemo.utils.StatusBarUtil;
+import com.lzz.studydemo.utils.UIUtils;
+import com.lzz.studydemo.view.TranslucentActionBar;
+import com.lzz.studydemo.R;
 
 /**
  * 顶部透明渐变

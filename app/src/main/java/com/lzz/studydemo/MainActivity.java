@@ -1,23 +1,22 @@
-package com.lzz.studtdemo;
+package com.lzz.studydemo;
 
 import android.graphics.Color;
+import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
 
 import com.example.lzz.studtdemo.Logger;
-import com.lzz.studtdemo.activity.AnamorphismActivity;
-import com.lzz.studtdemo.activity.StickyHeaderActivity;
-import com.lzz.studtdemo.adapter.CustomTransformer;
-import com.lzz.studtdemo.adapter.UltraPagerAdapter;
-import com.lzz.studtdemo.greendao.DaoSession;
-import com.lzz.studtdemo.greendao.Teacher;
-import com.lzz.studtdemo.greendao.User;
-import com.lzz.studtdemo.greendao.UserDao;
-import com.lzz.studtdemo.utils.StatusBarUtil;
+import com.lzz.studydemo.activity.AnamorphismActivity;
+import com.lzz.studydemo.activity.HttpActivity;
+import com.lzz.studydemo.adapter.CustomTransformer;
+import com.lzz.studydemo.adapter.UltraPagerAdapter;
+import com.lzz.studydemo.greendao.DaoSession;
+import com.lzz.studydemo.greendao.Teacher;
+import com.lzz.studydemo.greendao.User;
+import com.lzz.studydemo.greendao.UserDao;
 import com.tmall.ultraviewpager.UltraViewPager;
 
 import java.util.ArrayList;
@@ -48,6 +47,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.select).setOnClickListener(this);
         findViewById(R.id.go2Trans).setOnClickListener(this);
         findViewById(R.id.go2Sticky).setOnClickListener(this);
+        findViewById(R.id.go2Http).setOnClickListener(this);
+
 
 //        StatusBarUtil.setTransparent(this);
 
@@ -113,8 +114,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.go2Sticky:
                 go2Sticky();
                 break;
+            case R.id.go2Http:
+                go2Http();
+                break;
 
         }
+    }
+
+    private void go2Http() {
+        HttpActivity.startActivity(this);
     }
 
     /**
@@ -122,6 +130,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      */
     private void go2Trans() {
         AnamorphismActivity.startActivity(this);
+
     }
 
     /**
@@ -129,6 +138,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      */
     private void go2Sticky() {
         AnamorphismActivity.startActivity(this);
+
     }
 
     int i = 5;

@@ -49,4 +49,7 @@ dependencies {
     compile 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-12'
     //没有使用特殊Header，可以不加这行
     implementation 'com.android.support:recyclerview-v7:26.0.1'
+    //网络请求工具类
+    compile 'com.lzy.net:okgo:3.0.4'
+    implementation 'com.google.code.gson:gson:2.8.5'
 }

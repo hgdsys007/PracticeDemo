@@ -1,10 +1,11 @@
-package com.lzz.studtdemo;
+package com.lzz.studydemo;
 
 import android.app.Application;
 
-import com.lzz.studtdemo.greendao.DaoMaster;
-import com.lzz.studtdemo.greendao.DaoSession;
-import com.lzz.studtdemo.greendao.MySQLiteOpenHelper;
+import com.lzz.studydemo.greendao.DaoMaster;
+import com.lzz.studydemo.greendao.DaoSession;
+import com.lzz.studydemo.greendao.MySQLiteOpenHelper;
+import com.lzz.studydemo.http.J;
 
 import org.greenrobot.greendao.database.Database;
 
@@ -18,6 +19,7 @@ public class StudyDemoApplication extends Application {
     public void onCreate() {
         super.onCreate();
         context = this;
+        J.initHttp(this, null, null);
         createDataBase();
     }
 

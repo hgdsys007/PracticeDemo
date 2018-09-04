@@ -1,4 +1,4 @@
-package com.lzz.studtdemo.activity;
+package com.lzz.studydemo.activity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -6,15 +6,13 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.NestedScrollView;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 import android.widget.ImageView;
 
 import com.example.lzz.studtdemo.Logger;
-import com.lzz.studtdemo.ActionBarClickListener;
-import com.lzz.studtdemo.R;
-import com.lzz.studtdemo.present.ActionBarTrans;
-import com.lzz.studtdemo.utils.StatusBarUtil;
-import com.lzz.studtdemo.view.TranslucentActionBar;
+import com.lzz.studydemo.ActionBarClickListener;
+import com.lzz.studydemo.R;
+import com.lzz.studydemo.present.ActionBarTrans;
+import com.lzz.studydemo.view.TranslucentActionBar;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;

@@ -1,6 +1,6 @@
-package com.lzz.studtdemo.Bean;
+package com.lzz.studydemo.Bean;
 
-public class StickyBean {
+public class StickyBean extends BaseBean{
 
     public String name;
     public String autor;

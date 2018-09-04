@@ -51,4 +51,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="进入RecyclerView吸顶刷新" />
+    <Button
+        android:id="@+id/go2Http"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="网络请求例子" />
 </LinearLayout>

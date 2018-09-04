@@ -1,10 +1,9 @@
-package com.lzz.studtdemo.activity;
+package com.lzz.studydemo.activity;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.widget.NestedScrollView;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -14,10 +13,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.lzz.studtdemo.Logger;
-import com.lzz.studtdemo.Bean.StickyBean;
-import com.lzz.studtdemo.R;
-import com.lzz.studtdemo.adapter.StickyExampleAdapter;
-import com.lzz.studtdemo.view.TranslucentActionBar;
+import com.lzz.studydemo.Bean.StickyBean;
+import com.lzz.studydemo.R;
+import com.lzz.studydemo.adapter.StickyExampleAdapter;
+import com.lzz.studydemo.view.TranslucentActionBar;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;

@@ -1,4 +1,4 @@
-package com.lzz.studtdemo.view;
+package com.lzz.studydemo.view;
 
 import android.content.Context;
 import android.text.TextUtils;
@@ -9,8 +9,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.lzz.studtdemo.ActionBarClickListener;
-import com.lzz.studtdemo.R;
+import com.lzz.studydemo.ActionBarClickListener;
+import com.lzz.studydemo.R;
 
 
 /**

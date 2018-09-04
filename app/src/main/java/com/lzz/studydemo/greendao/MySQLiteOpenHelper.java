@@ -1,4 +1,4 @@
-package com.lzz.studtdemo.greendao;
+package com.lzz.studydemo.greendao;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

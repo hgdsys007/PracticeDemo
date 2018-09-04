@@ -1,4 +1,4 @@
-package com.lzz.studtdemo.adapter;
+package com.lzz.studydemo.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -9,8 +9,8 @@ import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.lzz.studtdemo.Bean.StickyBean;
-import com.lzz.studtdemo.R;
+import com.lzz.studydemo.Bean.StickyBean;
+import com.lzz.studydemo.R;
 
 import java.util.List;
 
