@@ -36,7 +36,7 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation 'org.greenrobot:greendao:3.2.2'
     // add library
-    compile 'com.github.yuweiguocn:GreenDaoUpgradeHelper:v2.1.0'
+    implementation 'com.github.yuweiguocn:GreenDaoUpgradeHelper:v2.1.0'
     //一个greenDao的数据库升级帮助类
     //gradle
     implementation('com.alibaba.android:ultraviewpager:1.0.7.7@aar') {
@@ -45,11 +45,11 @@ dependencies {
         exclude group: 'com.android.support'
     }
     //1.1.0 API改动过大，老用户升级需谨慎
-    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-12'
-    compile 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-12'
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-12'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-12'
     //没有使用特殊Header，可以不加这行
     implementation 'com.android.support:recyclerview-v7:26.0.1'
     //网络请求工具类
-    compile 'com.lzy.net:okgo:3.0.4'
+    implementation 'com.lzy.net:okgo:3.0.4'
     implementation 'com.google.code.gson:gson:2.8.5'
 }
