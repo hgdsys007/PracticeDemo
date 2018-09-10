@@ -1,4 +1,4 @@
-package com.lzz.studydemo.base;
+package com.lzz.studydemo.ui.base;
 
 import android.app.Activity;
 import android.os.Bundle;

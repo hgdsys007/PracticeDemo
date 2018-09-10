@@ -1,4 +1,4 @@
-package com.lzz.studydemo.adapter;
+package com.lzz.studydemo.ui.adapter;
 
 import android.support.annotation.NonNull;
 import android.support.v4.view.ViewPager;

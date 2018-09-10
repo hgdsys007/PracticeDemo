@@ -9,14 +9,14 @@ import android.view.Gravity;
 import android.view.View;
 
 import com.example.lzz.studtdemo.Logger;
-import com.lzz.studydemo.activity.AnamorphismActivity;
-import com.lzz.studydemo.activity.HttpActivity;
-import com.lzz.studydemo.adapter.CustomTransformer;
-import com.lzz.studydemo.adapter.UltraPagerAdapter;
 import com.lzz.studydemo.greendao.DaoSession;
 import com.lzz.studydemo.greendao.Teacher;
 import com.lzz.studydemo.greendao.User;
 import com.lzz.studydemo.greendao.UserDao;
+import com.lzz.studydemo.ui.activity.AnamorphismActivity;
+import com.lzz.studydemo.ui.activity.HttpActivity;
+import com.lzz.studydemo.ui.adapter.CustomTransformer;
+import com.lzz.studydemo.ui.adapter.UltraPagerAdapter;
 import com.tmall.ultraviewpager.UltraViewPager;
 
 import java.util.ArrayList;

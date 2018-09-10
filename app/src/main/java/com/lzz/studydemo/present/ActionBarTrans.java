@@ -3,7 +3,6 @@ package com.lzz.studydemo.present;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
-import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.support.v4.widget.NestedScrollView;
 import android.util.Log;
@@ -15,7 +14,6 @@ import android.widget.ImageView;
 import com.lzz.studydemo.StudyDemoApplication;
 import com.lzz.studydemo.utils.StatusBarUtil;
 import com.lzz.studydemo.utils.UIUtils;
-import com.lzz.studydemo.view.TranslucentActionBar;
 import com.lzz.studydemo.R;
 
 /**

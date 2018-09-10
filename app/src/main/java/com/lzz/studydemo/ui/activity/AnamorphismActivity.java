@@ -1,4 +1,4 @@
-package com.lzz.studydemo.activity;
+package com.lzz.studydemo.ui.activity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,10 +9,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 
 import com.example.lzz.studtdemo.Logger;
-import com.lzz.studydemo.ActionBarClickListener;
+import com.lzz.studydemo.ui.ActionBarClickListener;
 import com.lzz.studydemo.R;
 import com.lzz.studydemo.present.ActionBarTrans;
-import com.lzz.studydemo.view.TranslucentActionBar;
+import com.lzz.studydemo.ui.view.TranslucentActionBar;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;

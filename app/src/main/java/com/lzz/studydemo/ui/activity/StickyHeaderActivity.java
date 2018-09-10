@@ -1,4 +1,4 @@
-package com.lzz.studydemo.activity;
+package com.lzz.studydemo.ui.activity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -15,8 +15,8 @@ import android.widget.TextView;
 import com.example.lzz.studtdemo.Logger;
 import com.lzz.studydemo.Bean.StickyBean;
 import com.lzz.studydemo.R;
-import com.lzz.studydemo.adapter.StickyExampleAdapter;
-import com.lzz.studydemo.view.TranslucentActionBar;
+import com.lzz.studydemo.ui.adapter.StickyExampleAdapter;
+import com.lzz.studydemo.ui.view.TranslucentActionBar;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;

@@ -17,10 +17,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.AnamorphismActivity" />
+        <activity android:name=".ui.activity.AnamorphismActivity" />
 
-        <activity android:name=".activity.StickyHeaderActivity" />
-        <activity android:name=".activity.HttpActivity" />
+        <activity android:name=".ui.activity.StickyHeaderActivity" />
+        <activity android:name=".ui.activity.HttpActivity" />
     </application>
 
 </manifest>

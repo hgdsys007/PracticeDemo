@@ -1,4 +1,4 @@
-package com.lzz.studydemo.activity;
+package com.lzz.studydemo.ui.activity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,7 +9,7 @@ import android.widget.TextView;
 import com.example.lzz.studtdemo.Logger;
 import com.lzz.studydemo.Bean.ClassListBean;
 import com.lzz.studydemo.R;
-import com.lzz.studydemo.base.BaseActivity;
+import com.lzz.studydemo.ui.base.BaseActivity;
 import com.lzz.studydemo.http.DialogCallback;
 import com.lzz.studydemo.http.HttpResult;
 import com.lzz.studydemo.http.J;
