@@ -11,10 +11,11 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.ImageView;
 
+import com.lzz.studydemo.R;
 import com.lzz.studydemo.StudyDemoApplication;
+import com.lzz.studydemo.ui.view.TranslucentActionBar;
 import com.lzz.studydemo.utils.StatusBarUtil;
 import com.lzz.studydemo.utils.UIUtils;
-import com.lzz.studydemo.R;
 
 /**
  * 顶部透明渐变

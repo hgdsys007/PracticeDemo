@@ -15,6 +15,8 @@ import com.lzz.studydemo.greendao.User;
 import com.lzz.studydemo.greendao.UserDao;
 import com.lzz.studydemo.ui.activity.AnamorphismActivity;
 import com.lzz.studydemo.ui.activity.HttpActivity;
+import com.lzz.studydemo.ui.activity.SingleInstanceActivity;
+import com.lzz.studydemo.ui.activity.StickyHeaderActivity;
 import com.lzz.studydemo.ui.adapter.CustomTransformer;
 import com.lzz.studydemo.ui.adapter.UltraPagerAdapter;
 import com.tmall.ultraviewpager.UltraViewPager;
@@ -48,6 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.go2Trans).setOnClickListener(this);
         findViewById(R.id.go2Sticky).setOnClickListener(this);
         findViewById(R.id.go2Http).setOnClickListener(this);
+        findViewById(R.id.go2Instance).setOnClickListener(this);
 
 
 //        StatusBarUtil.setTransparent(this);
@@ -116,9 +119,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.go2Http:
                 go2Http();
+
+            case R.id.go2Instance:
+                go2Instance();
                 break;
 
         }
+    }
+
+    private void go2Instance() {
+        SingleInstanceActivity.startActivity(this);
     }
 
     private void go2Http() {
@@ -137,7 +147,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      * 进入吸頂
      */
     private void go2Sticky() {
-        AnamorphismActivity.startActivity(this);
+        StickyHeaderActivity.startActivity(this);
 
     }
 

@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.lzz.studydemo.GlideManager;
+import com.lzz.studydemo.manager.GlideManager;
 
 
 

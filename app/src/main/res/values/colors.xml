@@ -5,6 +5,8 @@
     <color name="colorAccent">#FF4081</color>
     <color name="white">#fff</color>
     <color name="text_black">#000</color>
-
+    <color name="main_green">#24cf5f</color>
     <color name="transpart">#00000000</color>
+    <color name="black_alpha_240">#f0000000</color>
+    <color name="user_info_message_notice">#E35B5A</color>
 </resources>

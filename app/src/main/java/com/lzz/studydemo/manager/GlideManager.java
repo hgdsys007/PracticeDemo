@@ -1,4 +1,4 @@
-package com.lzz.studydemo;
+package com.lzz.studydemo.manager;
 
 import android.content.Context;
 import android.widget.ImageView;
@@ -14,27 +14,26 @@ public class GlideManager {
     }
 
     // 静态内部类实现单例
-    private static class SingleInstance{
+    private static class SingleInstance {
 
-        private static GlideManager INSTANCE=new GlideManager();
+        private static GlideManager INSTANCE = new GlideManager();
 
     }
 
     public static GlideManager getInstance() {
 
+//        return   SingleInstance.INSTANCE;
 
-        return   SingleInstance.INSTANCE;
+        if (INSTANCE == null) {
+            synchronized (GlideManager.class) {
+                if (INSTANCE == null) {
 
-//        if (INSTANCE == null) {
-//            synchronized (GlideManager.class) {
-//                if (INSTANCE == null) {
-//
-//                    INSTANCE = new GlideManager();
-//                }
-//            }
-//        }
-//
-//        return INSTANCE;
+                    INSTANCE = new GlideManager();
+                }
+            }
+        }
+
+        return INSTANCE;
 
     }
 

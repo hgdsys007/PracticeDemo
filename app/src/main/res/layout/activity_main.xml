@@ -7,53 +7,71 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/insert"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="增加" />
-
-    <com.tmall.ultraviewpager.UltraViewPager
-        android:id="@+id/ultra_viewpager"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_centerInParent="true"
-        android:background="@android:color/white"
-        android:visibility="visible" />
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/insert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="增加" />
+
+            <com.tmall.ultraviewpager.UltraViewPager
+                android:id="@+id/ultra_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_centerInParent="true"
+                android:background="@android:color/white"
+                android:visibility="visible" />
 
 
-    <Button
-        android:id="@+id/delete"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="删除" />
+            <Button
+                android:id="@+id/delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="删除" />
 
-    <Button
-        android:id="@+id/change"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="修改" />
+            <Button
+                android:id="@+id/change"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="修改" />
 
-    <Button
-        android:id="@+id/select"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="查询" />
+            <Button
+                android:id="@+id/select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="查询" />
 
-    <Button
-        android:id="@+id/go2Trans"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="进入状态栏渐变" />
+            <Button
+                android:id="@+id/go2Trans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="进入状态栏渐变" />
 
-    <Button
-        android:id="@+id/go2Sticky"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="进入RecyclerView吸顶刷新" />
-    <Button
-        android:id="@+id/go2Http"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="网络请求例子" />
+            <Button
+                android:id="@+id/go2Sticky"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="进入RecyclerView吸顶刷新" />
+
+            <Button
+                android:id="@+id/go2Http"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="网络请求例子" />
+            <Button
+                android:id="@+id/go2Instance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="单例" />
+        </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>

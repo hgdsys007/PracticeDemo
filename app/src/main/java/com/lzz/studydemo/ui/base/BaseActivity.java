@@ -34,9 +34,7 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
 
     }
 
-    protected int getLayoutId() {
-        return 0;
-    }
+    protected abstract int getLayoutId();
 
     @Override
     public <T extends View> T findViewById(int id) {

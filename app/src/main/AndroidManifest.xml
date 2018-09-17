@@ -21,6 +21,7 @@
 
         <activity android:name=".ui.activity.StickyHeaderActivity" />
         <activity android:name=".ui.activity.HttpActivity" />
+        <activity android:name=".ui.activity.SingleInstanceActivity" />
     </application>
 
 </manifest>
