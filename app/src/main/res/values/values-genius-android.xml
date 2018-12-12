@@ -23,7 +23,7 @@
     <color name="black_alpha_192">#c0000000</color>
     <color name="black_alpha_208">#d0000000</color>
     <color name="black_alpha_224">#e0000000</color>
-    <color name="black_alpha_240">#f0000000</color>
+    <!--<color name="black_alpha_240">#f0000000</color>-->
     <color name="black_alpha_32">#20000000</color>
     <color name="black_alpha_48">#30000000</color>
     <color name="black_alpha_64">#40000000</color>

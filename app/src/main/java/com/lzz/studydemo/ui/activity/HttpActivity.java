@@ -9,10 +9,10 @@ import android.widget.TextView;
 import com.example.lzz.studtdemo.Logger;
 import com.lzz.studydemo.Bean.ClassListBean;
 import com.lzz.studydemo.R;
-import com.lzz.studydemo.ui.base.BaseActivity;
-import com.lzz.studydemo.http.DialogCallback;
 import com.lzz.studydemo.http.HttpResult;
 import com.lzz.studydemo.http.J;
+import com.lzz.studydemo.http.callback.DialogCallback;
+import com.lzz.studydemo.ui.base.BaseActivity;
 
 /**
  * 网络请求Activity
@@ -40,6 +40,11 @@ public class HttpActivity extends BaseActivity {
         setViewOnClickListener(R.id.btn_get);
     }
 
+    @Override
+    protected void initData() {
+        super.initData();
+
+    }
 
     @Override
     public void onClick(View view) {

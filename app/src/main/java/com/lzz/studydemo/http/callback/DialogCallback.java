@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.lzz.studydemo.http;
+package com.lzz.studydemo.http.callback;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -22,6 +22,7 @@ import android.widget.Toast;
 
 import com.lzy.okgo.model.Response;
 import com.lzy.okgo.request.base.Request;
+import com.lzz.studydemo.http.HttpResult;
 
 /**
  * ================================================

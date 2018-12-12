@@ -119,7 +119,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.go2Http:
                 go2Http();
-
+                break;
             case R.id.go2Instance:
                 go2Instance();
                 break;

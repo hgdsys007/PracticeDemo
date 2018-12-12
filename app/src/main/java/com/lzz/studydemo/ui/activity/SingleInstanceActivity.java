@@ -3,6 +3,7 @@ package com.lzz.studydemo.ui.activity;
 import android.content.Context;
 import android.content.Intent;
 import android.view.View;
+import android.widget.ImageView;
 
 import com.example.lzz.studtdemo.Logger;
 import com.lzz.studydemo.R;
@@ -16,6 +17,8 @@ import com.lzz.studydemo.utils.DialogHelper;
  */
 public class SingleInstanceActivity extends BaseActivity {
 
+    private ImageView ivImg;
+
     public static void startActivity(Context context) {
         Intent intent = new Intent(context, SingleInstanceActivity.class);
         context.startActivity(intent);
@@ -28,6 +31,9 @@ public class SingleInstanceActivity extends BaseActivity {
 
     @Override
     protected void initView() {
+
+        ivImg = findViewById(R.id.iv_img);
+
         setViewOnClickListener(R.id.btn_loadImage);
         setViewOnClickListener(R.id.btn_thread);
     }
@@ -45,11 +51,12 @@ public class SingleInstanceActivity extends BaseActivity {
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
+
+                                Logger.e("线程任务");
                                 DialogHelper.getConfirmDialog(activity,"我是标题","正在加载").show();
 
                             }
                         });
-                        Logger.e("线程任务");
                     }
                 });
                 break;

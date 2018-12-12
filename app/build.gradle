@@ -53,4 +53,6 @@ dependencies {
     implementation 'com.lzy.net:okgo:3.0.4'
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation 'com.android.support:design:26.0.1'
+    // 侧滑功能：https://github.com/bingoogolapple/BGASwipeBackLayout-Android
+    api 'cn.bingoogolapple:bga-swipebacklayout:1.1.9@aar'
 }

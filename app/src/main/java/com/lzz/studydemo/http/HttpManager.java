@@ -10,6 +10,7 @@ import com.lzy.okgo.cookie.store.SPCookieStore;
 import com.lzy.okgo.interceptor.HttpLoggingInterceptor;
 import com.lzy.okgo.model.HttpHeaders;
 import com.lzy.okgo.model.HttpParams;
+import com.lzz.studydemo.http.callback.BaseHttpCallback;
 
 import org.json.JSONObject;
 

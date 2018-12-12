@@ -1,4 +1,4 @@
-package com.lzz.studydemo.http;
+package com.lzz.studydemo.http.callback;
 
 import android.content.Context;
 import android.widget.Toast;

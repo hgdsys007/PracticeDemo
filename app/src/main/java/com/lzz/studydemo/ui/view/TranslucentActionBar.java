@@ -145,10 +145,14 @@ public final class TranslucentActionBar extends LinearLayout {
         }
 
         if (resIdLeft == 0) {
+
+            iconRight.setVisibility(View.GONE);
+
             //            iconLeft.setVisibility(View.GONE);
         } else {
             //            iconLeft.setBackgroundResource(resIdLeft);
             iconLeft.setVisibility(View.VISIBLE);
+            iconRight.setImageDrawable(context.getDrawable(resIdLeft));
         }
 
         if (resIdRight == 0) {

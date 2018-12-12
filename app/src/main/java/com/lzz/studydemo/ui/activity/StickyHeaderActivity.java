@@ -2,9 +2,6 @@ package com.lzz.studydemo.ui.activity;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
@@ -16,6 +13,7 @@ import com.example.lzz.studtdemo.Logger;
 import com.lzz.studydemo.Bean.StickyBean;
 import com.lzz.studydemo.R;
 import com.lzz.studydemo.ui.adapter.StickyExampleAdapter;
+import com.lzz.studydemo.ui.base.BaseActivity;
 import com.lzz.studydemo.ui.view.TranslucentActionBar;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
@@ -28,7 +26,7 @@ import java.util.List;
 /**
  * 悬浮吸顶，加刷新和加载
  */
-public class StickyHeaderActivity extends AppCompatActivity {
+public class StickyHeaderActivity extends BaseActivity {
     /**
      * 用于动态替换的吸顶View
      */
@@ -45,31 +43,26 @@ public class StickyHeaderActivity extends AppCompatActivity {
     }
 
 
-
-    @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        setContentView(R.layout.activity_sticky_head);
-        initView();
-        initListener();
-    }
-
     /**
      * 初始化View
      */
-    private void initView() {
-
+    protected void initView() {
 
         refreshLayout = findViewById(R.id.refreshLayout);
-
-
 
         recyclerView = (RecyclerView) findViewById(R.id.recycle);
         tvStickyHeaderView = (TextView) findViewById(R.id.tv_sticky_header_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(new StickyExampleAdapter(this, getData()));
+
+        initListener();
     }
+
+    @Override
+    protected int getLayoutId() {
+        return R.layout.activity_sticky_head;
+    }
+
     /**
      * 初始化Listener
      */
@@ -89,7 +82,6 @@ public class StickyHeaderActivity extends AppCompatActivity {
                 refreshlayout.finishLoadMore(2000/*,false*/);//传入false表示加载失败
             }
         });
-
 
 
         recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
@@ -112,11 +104,11 @@ public class StickyHeaderActivity extends AppCompatActivity {
                     int transViewStatus = (int) transInfoView.getTag();
                     int top = transInfoView.getTop();
                     if (transViewStatus == StickyExampleAdapter.HAS_STICKY_VIEW) {
-                        Logger.e("下一个需要吸顶View的Top"+transInfoView.getTop());
+                        Logger.e("下一个需要吸顶View的Top" + transInfoView.getTop());
 
                         if (top > 0) {
                             int dealtY = top - tvStickyHeaderView.getMeasuredHeight();
-                            Logger.e("顶部tvStickyHeaderView向上平移的View"+dealtY);
+                            Logger.e("顶部tvStickyHeaderView向上平移的View" + dealtY);
                             tvStickyHeaderView.setTranslationY(dealtY);
                         } else {
                             tvStickyHeaderView.setTranslationY(0);
@@ -148,5 +140,10 @@ public class StickyHeaderActivity extends AppCompatActivity {
             }
         }
         return stickyExampleModels;
+    }
+
+    @Override
+    public void onClick(View v) {
+
     }
 }

@@ -1,10 +1,11 @@
-package com.lzz.studydemo.http;
+package com.lzz.studydemo.http.callback;
 
 import android.content.Context;
 import android.widget.Toast;
 
 import com.example.lzz.studtdemo.Logger;
 import com.lzy.okgo.model.Response;
+import com.lzz.studydemo.http.HttpResult;
 
 /**
  * TODO:

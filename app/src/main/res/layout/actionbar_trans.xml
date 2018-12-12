@@ -31,7 +31,8 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:background="@mipmap/jianli_icon_fanhuibaise"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/jianli_icon_fanhuibaise"
                 android:visibility="gone"/>
             <!--android:paddingRight="20dp"-->
             <!--android:src="@mipmap/jianli_icon_fanhuibaise"-->

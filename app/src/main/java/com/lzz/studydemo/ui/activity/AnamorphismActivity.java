@@ -2,16 +2,15 @@ package com.lzz.studydemo.ui.activity;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.widget.NestedScrollView;
-import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.ImageView;
 
 import com.example.lzz.studtdemo.Logger;
-import com.lzz.studydemo.ui.ActionBarClickListener;
 import com.lzz.studydemo.R;
 import com.lzz.studydemo.present.ActionBarTrans;
+import com.lzz.studydemo.ui.ActionBarClickListener;
+import com.lzz.studydemo.ui.base.BaseActivity;
 import com.lzz.studydemo.ui.view.TranslucentActionBar;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
@@ -21,7 +20,7 @@ import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 /**
  * 渐变状态栏目
  */
-public class AnamorphismActivity extends AppCompatActivity {
+public class AnamorphismActivity extends BaseActivity {
 
 
     private TranslucentActionBar actionBar;
@@ -36,9 +35,12 @@ public class AnamorphismActivity extends AppCompatActivity {
 
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_anamorphis);
+    protected int getLayoutId() {
+        return R.layout.activity_anamorphis;
+    }
+
+    @Override
+    protected void initView() {
         actionBar = findViewById(R.id.actionbar);
         swipeTarget = findViewById(R.id.swipe_target);
         ivActCover = findViewById(R.id.iv_act_cover);
@@ -78,5 +80,10 @@ public class AnamorphismActivity extends AppCompatActivity {
 
         ActionBarTrans actionBarTrans = new ActionBarTrans(this, swipeTarget, actionBar, ivActCover);
         actionBarTrans.initBg();
+    }
+
+    @Override
+    public void onClick(View v) {
+
     }
 }

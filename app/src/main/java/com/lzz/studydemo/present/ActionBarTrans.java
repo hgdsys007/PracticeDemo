@@ -126,7 +126,8 @@ public class ActionBarTrans {
             if (drawable != null)
                 drawable.mutate().setAlpha((int) (alpha * 255));
             actionBar.vStatusBar.setImageDrawable(drawable);
-            actionBar.iconLeft.setBackground(UIUtils.getDrawable(R.mipmap.jianli_icon_fanhuibaise));
+            actionBar.iconLeft.setImageDrawable(context.getDrawable(R.mipmap.jianli_icon_fanhuibaise));
+//            actionBar.iconLeft.setBackground(UIUtils.getDrawable(R.mipmap.jianli_icon_fanhuibaise));
             //            actionBar.iconRight.setBackground(UIUtils.getDrawable(R.drawable.gengduobaise));
             actionBar.iconRight.setImageDrawable(context.getDrawable(R.mipmap.gengduobaise));
             actionBar.tvTitle.setTextColor(UIUtils.getColor(R.color.white));
@@ -137,7 +138,9 @@ public class ActionBarTrans {
             if (drawable != null)
                 drawable.mutate().setAlpha(255);
             actionBar.vStatusBar.setImageDrawable(drawable);
-            actionBar.iconLeft.setBackground(UIUtils.getDrawable(R.mipmap.gerenzhongxin_icon_fanhui));
+
+            actionBar.iconLeft.setImageDrawable(context.getDrawable(R.mipmap.gerenzhongxin_icon_fanhui));
+//            actionBar.iconLeft.setBackground(UIUtils.getDrawable(R.mipmap.gerenzhongxin_icon_fanhui));
             actionBar.tvTitle.setTextColor(UIUtils.getColor(R.color.text_black));
             //            actionBar.iconRight.setBackground(UIUtils.getDrawable(R.mipmap.gengduo_black));
             actionBar.iconRight.setImageDrawable(context.getDrawable(R.mipmap.gengduo_black));
