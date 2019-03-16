@@ -70,7 +70,7 @@ public class ActionBarTrans {
         // 上移主要背景图片，使空白状态栏消失(这样下方就空了状态栏的高度)
         if (ivActCover != null) {
             ViewGroup.MarginLayoutParams layoutParams = (ViewGroup.MarginLayoutParams) ivActCover.getLayoutParams();
-//            layoutParams.setMargins(0, -StatusBarUtil.getStatusBarHeight(context), 0, 0);
+            //            layoutParams.setMargins(0, -StatusBarUtil.getStatusBarHeight(context), 0, 0);
         }
 
         ViewGroup.LayoutParams imgItemBgparams = ivActCover.getLayoutParams();
@@ -86,8 +86,8 @@ public class ActionBarTrans {
 
     private void setImgHeaderBg() {
         // 高斯模糊背景 原来 参数：12,5  23,4
-//        Glide.with(context).load(R.drawable.whitebg)
-//                .into(actionBar.vStatusBar);
+        //        Glide.with(context).load(R.drawable.whitebg)
+        //                .into(actionBar.vStatusBar);
     }
 
     @SuppressLint("NewApi")
@@ -102,11 +102,9 @@ public class ActionBarTrans {
     }
 
     private void initNewSlidingParams() {
-        int titleBarAndStatusHeight = (int) (StudyDemoApplication.getStudyDemoApplication().getResources().getDimensionPixelSize(R.dimen.nav_bar_height)
-                + StatusBarUtil.getStatusBarHeight(context));
+        int titleBarAndStatusHeight = (int) (StudyDemoApplication.getStudyDemoApplication().getResources().getDimensionPixelSize(R.dimen.nav_bar_height) + StatusBarUtil.getStatusBarHeight(context));
 
-        slidingDistance = imageBgHeight - titleBarAndStatusHeight - (int) (StudyDemoApplication.getStudyDemoApplication().getResources().getDimensionPixelSize(R.dimen.nav_bar_height_more)
-        );
+        slidingDistance = imageBgHeight - titleBarAndStatusHeight - (int) (StudyDemoApplication.getStudyDemoApplication().getResources().getDimensionPixelSize(R.dimen.nav_bar_height_more));
 
     }
 
@@ -127,7 +125,7 @@ public class ActionBarTrans {
                 drawable.mutate().setAlpha((int) (alpha * 255));
             actionBar.vStatusBar.setImageDrawable(drawable);
             actionBar.iconLeft.setImageDrawable(context.getDrawable(R.mipmap.jianli_icon_fanhuibaise));
-//            actionBar.iconLeft.setBackground(UIUtils.getDrawable(R.mipmap.jianli_icon_fanhuibaise));
+            //            actionBar.iconLeft.setBackground(UIUtils.getDrawable(R.mipmap.jianli_icon_fanhuibaise));
             //            actionBar.iconRight.setBackground(UIUtils.getDrawable(R.drawable.gengduobaise));
             actionBar.iconRight.setImageDrawable(context.getDrawable(R.mipmap.gengduobaise));
             actionBar.tvTitle.setTextColor(UIUtils.getColor(R.color.white));
@@ -140,7 +138,7 @@ public class ActionBarTrans {
             actionBar.vStatusBar.setImageDrawable(drawable);
 
             actionBar.iconLeft.setImageDrawable(context.getDrawable(R.mipmap.gerenzhongxin_icon_fanhui));
-//            actionBar.iconLeft.setBackground(UIUtils.getDrawable(R.mipmap.gerenzhongxin_icon_fanhui));
+            //            actionBar.iconLeft.setBackground(UIUtils.getDrawable(R.mipmap.gerenzhongxin_icon_fanhui));
             actionBar.tvTitle.setTextColor(UIUtils.getColor(R.color.text_black));
             //            actionBar.iconRight.setBackground(UIUtils.getDrawable(R.mipmap.gengduo_black));
             actionBar.iconRight.setImageDrawable(context.getDrawable(R.mipmap.gengduo_black));

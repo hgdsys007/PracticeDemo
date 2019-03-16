@@ -6,8 +6,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.lzz.studtdemo.Logger;
 import com.lzz.studydemo.Bean.ClassListBean;
+import com.lzz.studydemo.Logger;
 import com.lzz.studydemo.R;
 import com.lzz.studydemo.http.HttpResult;
 import com.lzz.studydemo.http.J;

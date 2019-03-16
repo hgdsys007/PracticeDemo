@@ -1,4 +1,4 @@
-package com.example.lzz.studtdemo;
+package com.lzz.studydemo;
 
 import android.util.Log;
 

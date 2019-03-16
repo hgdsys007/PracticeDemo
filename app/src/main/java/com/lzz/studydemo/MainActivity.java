@@ -8,7 +8,7 @@ import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
 
-import com.example.lzz.studtdemo.Logger;
+import com.lzz.studydemo.Logger;
 import com.lzz.studydemo.greendao.DaoSession;
 import com.lzz.studydemo.greendao.Teacher;
 import com.lzz.studydemo.greendao.User;

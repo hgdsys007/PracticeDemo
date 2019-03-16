@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.lzz.studtdemo.Logger;
+import com.lzz.studydemo.Logger;
 import com.lzz.studydemo.Bean.StickyBean;
 import com.lzz.studydemo.R;
 import com.lzz.studydemo.ui.adapter.StickyExampleAdapter;
@@ -41,7 +41,6 @@ public class StickyHeaderActivity extends BaseActivity {
         Intent intent = new Intent(context, StickyHeaderActivity.class);
         context.startActivity(intent);
     }
-
 
     /**
      * 初始化View
@@ -96,9 +95,8 @@ public class StickyHeaderActivity extends BaseActivity {
                     }
                 }
                 //获取到下一个View
-                View transInfoView = recyclerView.findChildViewUnder(
-                        0, tvStickyHeaderView.getHeight() + 1);
-//                Logger.e("顶部View高是"+tvStickyHeaderView.getHeight());
+                View transInfoView = recyclerView.findChildViewUnder(0, tvStickyHeaderView.getHeight() + 1);
+                //                Logger.e("顶部View高是"+tvStickyHeaderView.getHeight());
                 if (transInfoView.getTag() != null) {
 
                     int transViewStatus = (int) transInfoView.getTag();
@@ -126,17 +124,13 @@ public class StickyHeaderActivity extends BaseActivity {
 
         for (int index = 0; index < 100; index++) {
             if (index < 15) {
-                stickyExampleModels.add(new StickyBean(
-                        "吸顶文本1", "name" + index, "gender" + index));
+                stickyExampleModels.add(new StickyBean("吸顶文本1", "name" + index, "gender" + index));
             } else if (index < 25) {
-                stickyExampleModels.add(new StickyBean(
-                        "吸顶文本2", "name" + index, "gender" + index));
+                stickyExampleModels.add(new StickyBean("吸顶文本2", "name" + index, "gender" + index));
             } else if (index < 35) {
-                stickyExampleModels.add(new StickyBean(
-                        "吸顶文本3", "name" + index, "gender" + index));
+                stickyExampleModels.add(new StickyBean("吸顶文本3", "name" + index, "gender" + index));
             } else {
-                stickyExampleModels.add(new StickyBean(
-                        "吸顶文本4", "name" + index, "gender" + index));
+                stickyExampleModels.add(new StickyBean("吸顶文本4", "name" + index, "gender" + index));
             }
         }
         return stickyExampleModels;

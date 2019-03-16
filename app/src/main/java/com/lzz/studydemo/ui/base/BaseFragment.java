@@ -8,7 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.lzz.studtdemo.Logger;
+import com.lzz.studydemo.Logger;
 
 public abstract class BaseFragment extends Fragment {
 

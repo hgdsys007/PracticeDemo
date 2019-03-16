@@ -3,13 +3,14 @@ package com.lzz.studydemo.manager;
 import android.content.Context;
 import android.widget.ImageView;
 
-import com.example.lzz.studtdemo.Logger;
+import com.lzz.studydemo.Logger;
 
 public class GlideManager {
 
     private static GlideManager INSTANCE;
 
     private GlideManager() {
+        Logger.e("图片单例"+"new GlideManager()");
 
     }
 
@@ -27,7 +28,6 @@ public class GlideManager {
         if (INSTANCE == null) {
             synchronized (GlideManager.class) {
                 if (INSTANCE == null) {
-
                     INSTANCE = new GlideManager();
                 }
             }

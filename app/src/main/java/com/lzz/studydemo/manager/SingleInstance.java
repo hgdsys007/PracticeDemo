@@ -1,6 +1,6 @@
 package com.lzz.studydemo.manager;
 
-import com.example.lzz.studtdemo.Logger;
+import com.lzz.studydemo.Logger;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -12,7 +12,7 @@ public enum SingleInstance {
 
     INSTANCE();
 
-    private  ExecutorService singleThreadExecutor;
+    private ExecutorService singleThreadExecutor;
 
     SingleInstance() {
         singleThreadExecutor = Executors.newSingleThreadExecutor();
@@ -21,7 +21,6 @@ public enum SingleInstance {
     }
 
     /**
-     *
      * @param runnable 任务
      */
     public void execute(Runnable runnable) {

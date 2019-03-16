@@ -6,7 +6,7 @@ import android.support.v4.widget.NestedScrollView;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.example.lzz.studtdemo.Logger;
+import com.lzz.studydemo.Logger;
 import com.lzz.studydemo.R;
 import com.lzz.studydemo.present.ActionBarTrans;
 import com.lzz.studydemo.ui.ActionBarClickListener;
