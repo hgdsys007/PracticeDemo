@@ -13,6 +13,7 @@
         <activity android:name="com.lzz.studydemo.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -22,6 +23,7 @@
         <activity android:name=".ui.activity.StickyHeaderActivity" />
         <activity android:name=".ui.activity.HttpActivity" />
         <activity android:name=".ui.activity.SingleInstanceActivity" />
+        <activity android:name=".ui.activity.Pull2finishActivity" />
     </application>
 
 </manifest>
